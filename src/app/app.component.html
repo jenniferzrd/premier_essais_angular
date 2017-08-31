@@ -1,9 +1,26 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
+<div class="container" style="text-align:center">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>
+        Welcome to {{title}}!
+      </h1>
 
-  <input type="text" [(ngModel)]="maData">
-  <p> {{ maData }}</p>
+      <input type="text" [(ngModel)]="maData">
+      <p> {{ maData }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <!-- On peut utiliser différent selecteur attribut, balise ou class css -->
+
+    <app-servers class="col-xs-12"></app-servers>
+    <!-- <div app-servers class="col-xs-12"></div> -->
+    <!-- <section class="app-servers"></section> -->
+
+  </div>
+  <div class="row">
+    <app-warning-alert></app-warning-alert>
+    <app-sucess-alert></app-sucess-alert>
+    <app-simple-data-blinding></app-simple-data-blinding>
+  </div>
 </div>
